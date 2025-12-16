@@ -1,0 +1,20 @@
+{
+  "name": "Enhanced Interface",
+  "author": "sobchuk",
+  "version": "2.0.0",
+  "type": "plugin",
+  "id": "enhanced-interface",
+  "url": "https://github.com/sobchuk/lampa-enhanced-interface",
+  "description": {
+    "en": "Modern, stylish interface for Lampa with animations, glassmorphism effects, and customizable themes",
+    "uk": "Сучасний, стильний інтерфейс для Lampa з анімаціями, glassmorphism ефектами та кастомізацією"
+  },
+  "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHJ4PSI4IiBmaWxsPSJ1cmwoI2dyYWQpIi8+CiAgPHBhdGggZD0iTTE2IDhMMjAgMTZMMTYgMjRMMTIgMTZMMTYgOFoiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDE9IjAiIHkxPSIwIiB4Mj0iMzIiIHkyPSIzMiI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM2NjY2ZmYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmY2NmE4Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KPC9zdmc+",
+  "min_app_version": "153",
+  "screenshots": [
+    "screenshot1.jpg",
+    "screenshot2.jpg"
+  ],
+  "tags": ["interface", "ui", "design", "animation", "theme"],
+  "require": []
+}
