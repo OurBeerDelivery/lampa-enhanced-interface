@@ -589,12 +589,36 @@
         // Заміна основного інтерфейсу
         Lampa.InteractionMain = function (object) {
             var use = new_interface;
+            var reasons = [];
 
-            if (Lampa.Storage.field('useNewInterface') === false) use = old_interface;
-            if (!(object.source == 'tmdb' || object.source == 'cub')) use = old_interface;
-            if (window.innerWidth < 767) use = old_interface;
-            if (Lampa.Manifest.app_digital < 153) use = old_interface;
-            if (Lampa.Platform.screen('mobile')) use = old_interface;
+            // Debug logging
+            console.log('[Enhanced Interface] Checking activation conditions...');
+            console.log('[Enhanced Interface] Source:', object.source);
+            console.log('[Enhanced Interface] Window width:', window.innerWidth);
+            console.log('[Enhanced Interface] Lampa version:', Lampa.Manifest.app_digital);
+
+            if (!(object.source == 'tmdb' || object.source == 'cub')) {
+                use = old_interface;
+                reasons.push('source not TMDB/CUB');
+            }
+            if (window.innerWidth < 767) {
+                use = old_interface;
+                reasons.push('screen too narrow');
+            }
+            if (Lampa.Manifest.app_digital < 153) {
+                use = old_interface;
+                reasons.push('Lampa version too old');
+            }
+            if (Lampa.Platform.screen('mobile')) {
+                use = old_interface;
+                reasons.push('mobile platform');
+            }
+
+            if (use === new_interface) {
+                console.log('[Enhanced Interface] ✅ ACTIVATED!');
+            } else {
+                console.log('[Enhanced Interface] ❌ NOT activated. Reasons:', reasons.join(', '));
+            }
 
             return new use(object);
         };
